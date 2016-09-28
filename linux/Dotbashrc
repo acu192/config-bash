@@ -35,6 +35,10 @@ alias rm='rm -i'
 alias mv='mv -i'
 
 # Path edits.
+if [ -d ~/github/config-bin/linux ]
+then
+    PATH=$PATH:~/github/config-bin/linux
+fi
 if [ -d ~/rhepo/ryan/bin/linux ]
 then
     PATH=$PATH:~/rhepo/ryan/bin/linux

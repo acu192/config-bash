@@ -15,6 +15,10 @@ alias lla='ls -alhF'
 alias lw='ls | wc -l'
 
 # Path edits:
+if [ -d ~/Desktop/github/config-bin/osx ]
+then
+    export PATH=$PATH:~/Desktop/github/config-bin/osx
+fi
 if [ -d ~/Desktop/rhepo/ryan/bin/osx ]
 then
     export PATH=$PATH:~/Desktop/rhepo/ryan/bin/osx
