@@ -3,7 +3,7 @@
 This config:
 1. sets the prompt contents and colors to look nice,
 2. creates some handy aliases,
-3. points the `PATH` to where my `bin` repo usually resides, and
+3. points the `PATH` to where my [`bin` repo](https://github.com/acu192/config-bin) usually resides, and
 4. sets other misc `bash` and `env` things to make it behave like I like it.
 
 ### How to install
