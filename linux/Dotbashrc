@@ -33,6 +33,9 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias rm='rm -i'
 alias mv='mv -i'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
 
 # Path edits.
 if [ -d ~/github/config-bin/linux ]

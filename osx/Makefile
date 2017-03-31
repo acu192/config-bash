@@ -1,4 +1,5 @@
 
 all:
-	@cp Dotprofile ~/.profile
+	@cp Dotbash_profile ~/.bash_profile
+	@cp Dotbashrc ~/.bashrc
 	@echo "Bash files installed..."

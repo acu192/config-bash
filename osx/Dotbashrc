@@ -13,6 +13,9 @@ alias la='ls -aF'
 alias ll='ls -lhF'
 alias lla='ls -alhF'
 alias lw='ls | wc -l'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
 
 # Path edits:
 if [ -d ~/Desktop/github/config-bin/osx ]
@@ -31,5 +34,5 @@ export PATH=$PATH:.
 
 # Make the desktop the home directory, because the default home directory
 # has a bunch of OSX crap-folders.
-export HOME=`echo ~`/Desktop
-cd
+#export HOME=`echo ~`/Desktop
+#cd
