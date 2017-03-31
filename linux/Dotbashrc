@@ -50,4 +50,16 @@ if [ -d /rhepo/ryan/bin/linux ]
 then
     PATH=$PATH:/rhepo/ryan/bin/linux
 fi
+if [ -d ~/github/config-bin/common ]
+then
+    PATH=$PATH:~/github/config-bin/common
+fi
+if [ -d ~/rhepo/ryan/bin/common ]
+then
+    PATH=$PATH:~/rhepo/ryan/bin/common
+fi
+if [ -d /rhepo/ryan/bin/common ]
+then
+    PATH=$PATH:/rhepo/ryan/bin/common
+fi
 PATH=$PATH:.
