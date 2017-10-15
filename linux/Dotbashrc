@@ -19,7 +19,7 @@ shopt -s checkwinsize
 export LC_COLLATE=C
 
 # Awesome prompt text and colors.
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
 
 # Nice aliases.
 alias ls='ls -F --color=auto'
@@ -63,3 +63,46 @@ then
     PATH=$PATH:/rhepo/ryan/bin/common
 fi
 PATH=$PATH:.
+
+# Anaconda
+export ANACONDA_HOME=/home/ryan/.anaconda3
+export PATH=$ANACONDA_HOME/bin:$PATH
+
+# Source the git autocomplete file.
+. /usr/share/bash-completion/completions/git
+. /usr/lib/git-core/git-sh-prompt
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# Auto-activate the conda environment with the same name as the folder.
+CONDA_ENVS_DIR=$ANACONDA_HOME/envs
+function _conda_auto_activate() {
+    lastdir="$(basename "$(pwd)")"
+    for env_name in "$CONDA_ENVS_DIR"/*
+    do
+        env_name="$(basename "$env_name")"
+        if [ "$lastdir" == "$env_name" ]
+        then
+            if [[ "$PATH" == *"$CONDA_ENVS_DIR"/"$env_name"* ]]
+            then
+                echo "Alreayd activated:" "$env_name"
+            else
+                echo "Activating conda environment:" "$env_name"
+                source activate "$env_name"
+            fi
+            break
+        fi
+    done
+}
+function chpwd() {
+    _conda_auto_activate
+}
+function cd() {
+    builtin cd "$@" && chpwd;
+}
+function pushd() {
+    builtin pushd "$@" && chpwd;
+}
+function popd() {
+    builtin popd "$@" && chpwd;
+}
+
