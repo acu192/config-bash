@@ -67,6 +67,7 @@ PATH=$PATH:.
 # Anaconda
 export ANACONDA_HOME=/home/ryan/.anaconda3
 export PATH=$ANACONDA_HOME/bin:$PATH
+source $ANACONDA_HOME/etc/profile.d/conda.sh
 
 # Source the git autocomplete file.
 . /usr/share/bash-completion/completions/git
