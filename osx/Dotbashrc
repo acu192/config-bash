@@ -43,7 +43,7 @@ export PATH=$PATH:.
 # Anaconda
 export ANACONDA_HOME=/Users/ryan/anaconda3
 export PATH=$ANACONDA_HOME/bin:$PATH
-source "/Users/ryan/anaconda3/etc/profile.d/conda.sh"
+source $ANACONDA_HOME/etc/profile.d/conda.sh
 
 # Make the desktop the home directory, because the default home directory
 # has a bunch of OSX crap-folders.
