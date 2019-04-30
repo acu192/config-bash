@@ -73,7 +73,7 @@ function _conda_auto_activate() {
                 echo "Alreayd activated:" "$env_name"
             else
                 echo "Activating conda environment:" "$env_name"
-                source activate "$env_name"
+                conda activate "$env_name"
             fi
             break
         fi
