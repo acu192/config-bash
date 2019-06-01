@@ -1,3 +1,6 @@
+# In case this _isn't_ the default:
+umask 022
+
 # Max number of history entries.
 HISTSIZE=1000
 
