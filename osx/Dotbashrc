@@ -93,3 +93,5 @@ function popd() {
     builtin popd "$@" && chpwd;
 }
 
+# MacOS wants `zsh` to be your shell. We can silence the warning it gives us:
+export BASH_SILENCE_DEPRECATION_WARNING=1
