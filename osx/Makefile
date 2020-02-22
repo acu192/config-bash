@@ -10,3 +10,4 @@ all:
 	@echo "  First install brew, then install wget via brew,
 	@echo "  then Anaconda via wget and bash."
 	@echo '  Brew can also install nodejs (`brew install node`).'
+	@echo "  Finally, install Docker via the official MacOS installer (.dmg)"
